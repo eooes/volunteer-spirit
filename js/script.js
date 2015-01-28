@@ -21,9 +21,9 @@
 
 	$(document).ready(function() {
 		/* Search form */
-		$( '#keyword' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'Enter keyword' );
-		$( '#location' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'Name of your city or ZIP code' );
-		$( '#category' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'Telecommunications' );
+		$( '#keyword' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'ข้อความที่ต้องการค้นหา' );
+		$( '#location' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'สถานที่ๆต้องการค้นหา' );
+		$( '#category' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'ประเภทของกิจกรรม' );
 
 		/* Dropdown */
 		$( '.with-dropdown' ).on({
@@ -198,6 +198,31 @@
 		/****************/
 
 		/* Opening */
+   
+        $( '.star' ).hide();
+        $('.opening').hover(
+            function(){
+                $( '.star[ title = '+this.title+' ]' ).show();
+            }, function(){
+                $( '.star[ title = '+this.title+' ]' ).hide();
+            }
+        );
+        
+        
+		$( '.switch-input' ).click(function() {
+            if ($('.sw_normal').is(':checked')){
+                $('.regist_normal').show();
+                $('.regist_organization').hide();
+                
+            } else if ($('.sw_organization').is(':checked')){
+                $('.regist_normal').hide();
+                $('.regist_organization').show();
+                
+            }
+            
+		})
+        
+        
 		$( '.star' ).click(function() {
 			if ( $( this ).hasClass( 'star-checked' ) ) {
 				$( this ).removeClass( 'star-checked' );

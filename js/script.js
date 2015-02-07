@@ -25,11 +25,26 @@
 		$( '#location' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'สถานที่ๆต้องการค้นหา' );
 		$( '#category' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'ประเภทของกิจกรรม' );
 
+        
+		$( '#category_job1' ).after( '<i class="icon2 fa fa-list"></i>' ).attr( 'placeholder', 'เลือกประเภทงาน' );
+		$( '#place1' ).after( '<i class="icon2 fa fa-map-marker"></i>' ).attr( 'placeholder', 'เลือกพิ้นที่ที่สะดวก' );
+		$( '#talent1' ).after( '<i class="icon2 fa fa-thumbs-up"></i>' ).attr( 'placeholder', 'เลือกความสามารถพิเศษ' );
+        
+        
+        
+        
+        
+        $( '#oag0' ).after( '<i class="icon3 fa fa-sitemap"></i>' ).attr( 'placeholder', 'ประเภทองค์กร' );
+        $( '#oag1' ).after( '<i class="icon2 fa fa-sitemap"></i>' ).attr( 'placeholder', 'ประเภทงาน' );
+        $( '#oag2' ).after( '<i class="icon2 fa fa-map-marker"></i>' ).attr( 'placeholder', 'พิ้นที่ที่สะดวก' );
+        $( '#oag3' ).after( '<i class="icon2 fa fa-pencil-square"></i>' ).attr( 'placeholder', 'ความสามารถ' );
+        
 		/* Dropdown */
 		$( '.with-dropdown' ).on({
 			click: function() {
 				$( '.dropdown#dropdown-' + this.id ).css( 'width', $( this ).parent().css( 'width' ) );
 				$( '.dropdown#dropdown-' + this.id ).toggle();
+              
 			}
 		});
 
@@ -141,9 +156,10 @@
 				$( this ).attr( 'id', 'select-' + selectId );
 				selectId++;
 			}
+     
 			$( this ).after( '<div class="select" id="' + this.id + '"></div>' );
 			$( '.select#' + this.id ).prepend( '<div class="select-header" id="' + this.id + '"></div>' );
-			$( '.select-header#' + this.id ).prepend( '<p>By date</p>' );
+			$( '.select-header#' + this.id ).prepend( '<p>'+ $( this ).data('wolf-header') +'</p>' );
 			$( '.select#' + this.id ).append( '<ul class="opt-list" id="cur-opt-list"></ul>' );
 			$( this ).children( 'optgroup' ).each(function() {
 				$( '#cur-opt-list' ).append( '<li class="optgroup">' + $( this ).attr( 'label' ) + '</li>' );

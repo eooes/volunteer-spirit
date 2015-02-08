@@ -29,15 +29,17 @@
 		$( '#category_job1' ).after( '<i class="icon2 fa fa-list"></i>' ).attr( 'placeholder', 'เลือกประเภทงาน' );
 		$( '#place1' ).after( '<i class="icon2 fa fa-map-marker"></i>' ).attr( 'placeholder', 'เลือกพิ้นที่ที่สะดวก' );
 		$( '#talent1' ).after( '<i class="icon2 fa fa-thumbs-up"></i>' ).attr( 'placeholder', 'เลือกความสามารถพิเศษ' );
-        
-        
-        
-        
+
         
         $( '#oag0' ).after( '<i class="icon3 fa fa-sitemap"></i>' ).attr( 'placeholder', 'ประเภทองค์กร' );
         $( '#oag1' ).after( '<i class="icon2 fa fa-sitemap"></i>' ).attr( 'placeholder', 'ประเภทงาน' );
         $( '#oag2' ).after( '<i class="icon2 fa fa-map-marker"></i>' ).attr( 'placeholder', 'พิ้นที่ที่สะดวก' );
         $( '#oag3' ).after( '<i class="icon2 fa fa-pencil-square"></i>' ).attr( 'placeholder', 'ความสามารถ' );
+        
+        $( '#prof_s1' ).after( '<i class="icon2 fa fa-street-view"></i>' ).attr( 'placeholder', 'ประเมินตน' );
+        $( '#prof_s2' ).after( '<i class="icon2 fa fa-pencil-square"></i>' ).attr( 'placeholder', 'ความสามารถ' );
+        $( '#prof_s3' ).after( '<i class="icon2 fa fa-list-alt"></i>' ).attr( 'placeholder', 'อะไรไม่รู้' );
+        
         
 		/* Dropdown */
 		$( '.with-dropdown' ).on({

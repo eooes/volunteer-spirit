@@ -3382,7 +3382,13 @@ button.close {
 .list-user-modal-all{
     padding: 10px 0;
     width: 100%;
+    border-bottom: 1px dotted #ccc;
     
+}
+.warp_body {
+	height: 400px;
+	overflow-y: auto;
+
 }
 .list-user-modal-all .col-md-2 {
     text-align: center;
@@ -3390,4 +3396,30 @@ button.close {
 .list-user-modal-all .col-md-10 p {
 	color: #777;
 	padding: 5px 15px 15px 15px;
+}
+.org_info1_warp {
+	padding: 26px 18px 28px 20px;
+
+}
+.org_info1_warp .col-md-4  i{
+  font-size: 2em;
+  border-radius: 50px;
+  background: coral;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.org_info1_warp .col-md-4  i.blue {
+	background: cornflowerblue;
+}
+.org_info1_warp .col-md-4  i.purple {
+	background: slateblue;
+}
+.org_info1_warp .col-md-4 {
+	text-align: center;
+	color: #4d4d4d;
+}
+.org_info1_warp .col-md-4 h4{
+	font-size: 1.3em;
+	padding-bottom: 5px;
 }

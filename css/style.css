@@ -2240,6 +2240,11 @@ input[type="button"].file:active {
 	color: #c4c4c4;
 	margin-top: 6px;
 }
+.info2 {
+	font: 12px "OpenSans";
+	color: #999;
+	margin-top: 10px;
+}
 
 .required {
 	color: #e16143;
@@ -3060,7 +3065,6 @@ special_overlab2{
 .float_r {
     float: right;
 }
-
 .login_warning i, 
 .login_danger i{
     font-size: 2em;
@@ -3076,6 +3080,19 @@ special_overlab2{
     top: 97px;
     position: absolute;
     width: 371px;
+}
+.login_danger_full {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #ff4c4c;
+    color: white;
+}
+.login_danger_full i {
+    font-size: 1.2em;
 }
 .login_warning {
     background-color: #ffc04c;
@@ -3423,3 +3440,4 @@ button.close {
 	font-size: 1.3em;
 	padding-bottom: 5px;
 }
+.margin_top10 {margin-top: 10px; }

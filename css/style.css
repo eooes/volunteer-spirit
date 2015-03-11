@@ -3407,7 +3407,7 @@ button.close {
 	overflow-y: auto;
 
 }
-.list-user-modal-all .col-md-2 {
+.list-user-modal-all .col-md-2, .txt_center {
     text-align: center;
 }
 .list-user-modal-all .col-md-10 p {
@@ -3441,3 +3441,4 @@ button.close {
 	padding-bottom: 5px;
 }
 .margin_top10 {margin-top: 10px; }
+.pointermouse {cursor: pointer;}

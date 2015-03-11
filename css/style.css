@@ -9,7 +9,7 @@ a img {
 
 .wrapper {
 	background: #f9f9f9;
-	font: 13px "OpenSans";;
+	font: 13px "OpenSans";
 	min-width: 1200px;
 	overflow: visible;
 }
@@ -1469,6 +1469,19 @@ p.opening-type {
 	padding: 2px 0 0 0;
 	position: relative;
 }
+p.opening-type2 {
+	border-radius: 3px;
+	display: inline-block;
+	font: 12px "OpenSans";
+	color: #fff;
+	width: 55px;
+	height: 20px;
+	text-align: center;
+	padding: 2px 0 0 0;
+	position: relative;
+    margin-bottom: 17px;
+}
+.wig_extra div:last-of-type p.opening-type2 {margin-bottom: 0px;}
 
 .opening-loader {
 	background: url( '../images/loadinfo.net.gif' ) center no-repeat;
@@ -3440,5 +3453,133 @@ button.close {
 	font-size: 1.3em;
 	padding-bottom: 5px;
 }
+.warp_date_act { padding-bottom: 45px;}
+.warp_date_act .col-md-5 {text-align: center;}
+.warp_date_act .col-md-5 h1 {color: #ccc; padding-bottom: 10px}
+.warp_date_act .col-md-2 {  
+    font-size: 3em;
+  color: #ccc;
+  padding-top: 65px;
+text-align: center;
+}
+
+
 .margin_top10 {margin-top: 10px; }
 .pointermouse {cursor: pointer;}
+
+
+
+
+.date-as-calendar {
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Helvetica", "Arial", sans-serif;
+
+  vertical-align: top;
+
+
+  color: black;
+  background: white;
+  background : linear-gradient(to bottom right, #FFF 0%, #EEE 100%);
+
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  overflow: hidden;
+
+  box-shadow: 2px 2px 2px -2px #dfdfdf;
+}
+.date-as-calendar .weekday,
+.date-as-calendar .day,
+.date-as-calendar .month,
+.date-as-calendar .year {
+  text-align: center;
+  line-height: 1.0;
+}
+.date-as-calendar .month {
+  font-family: "OpenSans-Bold", sans-serif;
+  text-transform: uppercase;
+  background: #B11;
+  background : linear-gradient(to bottom right, #E5B6B6 0%, #A00 100%);
+  color: white;
+}
+.date-as-calendar .end.month {
+  background: #614D4D !important;
+  background: linear-gradient(to bottom right, #B6D3E5 0%, #334A88 100%) !important;
+    
+}
+
+
+
+/****************************************/
+/* Layout rules using display: inline-flex and relative dimensions using em. */
+.inline-flex.date-as-calendar {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+  width: 4em; 
+  height: 4.5em; 
+}
+.inline-flex.date-as-calendar .weekday,
+.inline-flex.date-as-calendar .day,
+.inline-flex.date-as-calendar .month,
+.inline-flex.date-as-calendar .year {
+  display: block;
+  flex: 1 1 auto;
+}
+.inline-flex.date-as-calendar .month {
+  order: 1;
+  font-size: 0.6em;
+  padding: 0.35em 0;
+}
+.inline-flex.date-as-calendar .weekday {
+  order: 2;
+  font-size: 0.6125em;
+    padding-top: 10px;
+}
+.inline-flex.date-as-calendar .day {
+  order: 3;
+  font-size: 1.5em;
+    font-family: "Arial Black", Gadget, sans-serif;
+    padding-bottom: 5px;
+}
+.inline-flex.date-as-calendar .year {
+  order: 4;
+  font-size: 0.87750em;
+    padding-bottom: 5px;
+}
+
+/****************************************/
+/* Multiple sizes. */
+.date-as-calendar.size0_5x {
+  font-size: 8px;
+}
+.date-as-calendar.size0_75x {
+  font-size: 12px;
+}
+.date-as-calendar.size1x {
+  font-size: 16px;
+}
+.date-as-calendar.size1_25x {
+  font-size: 20px;
+}
+.date-as-calendar.size1_5x {
+  font-size: 24px;
+}
+.date-as-calendar.size1_75x {
+  font-size: 28px;
+}
+.date-as-calendar.size2x {
+  font-size: 32px;
+}
+
+
+
+/*END DATE */
+
+.extra_info_warp {padding: 20px; color: #566266; font-size: 1.1em;}
+.extra_info_warp div i { font-size: 1.5em; margin-right: 5px; }
+.extra_info_warp2 p {width: 90px; margin-bottom: 10px;}
+.extra_info_warp2 {margin-top: 20px;}

@@ -21,13 +21,59 @@
 
 
 	$(document).ready(function() {
-        $("#manage_c").change(function(){
-    if($(this).val() == "1") {
-       alert('f');
-    } else {
-       alert('f');
+        
+        
+    // select box 
+       $('.c_member').hide();
+       $('.c_voreenter').hide();
+       $('.c_content').hide();
+       $('.c_category').hide();
+       $('.c_email').hide();
+
+    $("#manage_c").change(function(){
+       $('.c_default').hide(); 
+    if($(this).val() == "0") {
+
+       $('.c_member').show();
+       $('.c_voreenter').hide();
+       $('.c_content').hide();
+       $('.c_category').hide();
+       $('.c_email').hide();
+    
+    } else if($(this).val() == "1") {
+       $('.c_member').hide();
+       $('.c_voreenter').show();
+       $('.c_content').hide();
+       $('.c_category').hide();
+       $('.c_email').hide();
+    } else if($(this).val() == "2") {
+       $('.c_member').hide();
+       $('.c_voreenter').hide();
+       $('.c_content').show();
+       $('.c_category').hide();
+       $('.c_email').hide();
+    } else if($(this).val() == "3") {
+       $('.c_member').hide();
+       $('.c_voreenter').hide();
+       $('.c_content').hide();
+       $('.c_category').show();
+       $('.c_email').hide();
+    } else if($(this).val() == "4") {
+       $('.c_member').hide();
+       $('.c_voreenter').hide();
+       $('.c_content').hide();
+       $('.c_category').hide();
+       $('.c_email').show();
+    } else if($(this).val() == null) {
+       $('.c_member').hide();
+       $('.c_voreenter').hide();
+       $('.c_content').hide();
+       $('.c_category').hide();
+       $('.c_email').hide();
     }
-});
+        
+        
+    });
 		/* Search form */
 		$( '#keyword' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'ข้อความที่ต้องการค้นหา' );
 		$( '#location' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'สถานที่ๆต้องการค้นหา' );
@@ -159,54 +205,54 @@
 			$( this ).parent().remove();
 		});
 
-		/* Select */
-		var selectId = 0;
-		$( 'select' ).hide().each(function() {
-			if ( ! this.id ) {
-				$( this ).attr( 'id', 'select-' + selectId );
-				selectId++;
-			}
-     
-			$( this ).after( '<div class="select" id="' + this.id + '"></div>' );
-			$( '.select#' + this.id ).prepend( '<div class="select-header" id="' + this.id + '"></div>' );
-			$( '.select-header#' + this.id ).prepend( '<p>'+ $( this ).data('wolf-header') +'</p>' );
-			$( '.select#' + this.id ).append( '<ul class="opt-list" id="cur-opt-list"></ul>' );
-			$( this ).children( 'optgroup' ).each(function() {
-				$( '#cur-opt-list' ).append( '<li class="optgroup">' + $( this ).attr( 'label' ) + '</li>' );
-				$( this ).children( 'option' ).each(function() {
-					$( '#cur-opt-list' ).append( '<li class="option">' + $( this ).text() + '</li>' );
-				});
-			});
-			$( this ).children( 'option' ).each(function() {
-				$( '#cur-opt-list' ).append( '<li class="option">' + $( this ).text() + '</li>' );
-			});
-			$( '#cur-opt-list' ).attr( 'id', this.id );
-		});
-
-		$( '.select-header' ).on({
-			click: function() {
-				$( '.opt-list#' + this.id ).toggle();
-				$( '.opt-list#' + this.id ).children( 'li' ).attr( 'id', this.id );
-			}
-		});
-
-		$( '.option' ).on({
-			click: function() {
-				$( '.opt-list#' + this.id ).hide();
-				$( '.select-header#' + this.id ).children( 'p' ).text( $( this ).text() );
-				var index = $( this ).parent().children( 'li.option' ).index( $( this ) );
-				var curSelect = $( 'opt-list#' + this.id ).prop( 'selectedIndex', index );
-				if ( curSelect.val() ) {
-					curSelect.change();
-				}
-			}
-		});
-
-		$( document ).mousedown(function( e ) {
-			if ( $( e.target ).closest( '.select' ).length == 0 ) {
-				$( '.opt-list' ).hide();
-			}
-		});
+//		/* Select */
+//		var selectId = 0;
+//		$( 'select' ).hide().each(function() {
+//			if ( ! this.id ) {
+//				$( this ).attr( 'id', 'select-' + selectId );
+//				selectId++;
+//			}
+//     
+//			$( this ).after( '<div class="select" id="' + this.id + '"></div>' );
+//			$( '.select#' + this.id ).prepend( '<div class="select-header" id="' + this.id + '"></div>' );
+//			$( '.select-header#' + this.id ).prepend( '<p>'+ $( this ).data('wolf-header') +'</p>' );
+//			$( '.select#' + this.id ).append( '<ul class="opt-list" id="cur-opt-list"></ul>' );
+//			$( this ).children( 'optgroup' ).each(function() {
+//				$( '#cur-opt-list' ).append( '<li class="optgroup">' + $( this ).attr( 'label' ) + '</li>' );
+//				$( this ).children( 'option' ).each(function() {
+//					$( '#cur-opt-list' ).append( '<li class="option">' + $( this ).text() + '</li>' );
+//				});
+//			});
+//			$( this ).children( 'option' ).each(function() {
+//				$( '#cur-opt-list' ).append( '<li class="option">' + $( this ).text() + '</li>' );
+//			});
+//			$( '#cur-opt-list' ).attr( 'id', this.id );
+//		});
+//
+//		$( '.select-header' ).on({
+//			click: function() {
+//				$( '.opt-list#' + this.id ).toggle();
+//				$( '.opt-list#' + this.id ).children( 'li' ).attr( 'id', this.id );
+//			}
+//		});
+//
+//		$( '.option' ).on({
+//			click: function() {
+//				$( '.opt-list#' + this.id ).hide();
+//				$( '.select-header#' + this.id ).children( 'p' ).text( $( this ).text() );
+//				var index = $( this ).parent().children( 'li.option' ).index( $( this ) );
+//				var curSelect = $( 'opt-list#' + this.id ).prop( 'selectedIndex', index );
+//				if ( curSelect.val() ) {
+//					curSelect.change();
+//				}
+//			}
+//		});
+//
+//		$( document ).mousedown(function( e ) {
+//			if ( $( e.target ).closest( '.select' ).length == 0 ) {
+//				$( '.opt-list' ).hide();
+//			}
+//		});
 
 		/* Pseudo paging */
 		$( '.openings' ).append( '<div class="opening-loader"></div>' );

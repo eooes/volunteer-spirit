@@ -19,7 +19,15 @@
 		$( '.slider-indicator#slide-' + curSlide ).addClass( 'current' );
 	}
 
+
 	$(document).ready(function() {
+        $("#manage_c").change(function(){
+    if($(this).val() == "1") {
+       alert('f');
+    } else {
+       alert('f');
+    }
+});
 		/* Search form */
 		$( '#keyword' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'ข้อความที่ต้องการค้นหา' );
 		$( '#location' ).after( '<div class="icon"></div>' ).attr( 'placeholder', 'สถานที่ๆต้องการค้นหา' );
@@ -358,3 +366,6 @@
 		}
 	});
 })(jQuery);
+
+
+

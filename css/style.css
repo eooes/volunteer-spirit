@@ -940,6 +940,10 @@ img.slide-phone {
 	float: left;
 	width: 672px;
 }
+.content2 {
+	float: left;
+    width: 100%;
+}
 
 .left-sidebar .content {
 	float: right;
@@ -1476,6 +1480,10 @@ img.slide-phone {
 
 .posted-on span {
 	color: #e16143;
+}
+.posted-by, .posted-by a {
+	color: #a8abb0;
+    text-decoration: none;
 }
 
 .results {
@@ -3822,7 +3830,20 @@ text-align: center;
 
 
 /*END DATE */
-
+.row {margin: 15px;}
+.pr_list_img .col-md-3{ text-align: center; padding-bottom: 30px;}
+.pr_list_img .col-md-3 h4 {padding: 10px 8px 0px 8px; overflow: hidden; height: 19px;}
+.pr_list_img .col-md-3 h5 {padding-top: 5px; color: #555; font-size: 1.1em;}
+.pr_list_img .col-md-9 h4 { padding: 10px 0;}
+.pr_list_img .col-md-9 h5 {padding-top: 5px; color: #555; font-size: 1em; padding-bottom: 3px;}
+.extend_prob {width: 200px !important;}
+.img-responsive { width: 100%; margin: 20px 0;}
+.post_content { text-indent: 50px; line-height: 1.8em;}
+.post_content p { margin: 15px 0; padding: 0 10px; border-radius: 5px;}
+.post_content p:hover { background: #F0F8FF;}
+.attachedfile a {text-decoration: none; color: #236B8E ;}
+.attachedfile a:hover {color:#184a63;}
+.attachedfile p { padding: 20px 0; border-top: 1px #ccc dotted;}
 .extra_info_warp {padding: 20px; color: #566266; font-size: 1.1em;}
 .extra_info_warp div i { font-size: 1.5em; margin-right: 5px; }
 .extra_info_warp2 p {width: 90px; margin-bottom: 10px;}
@@ -3834,3 +3855,8 @@ text-align: center;
 .table_search tr:last-child th, .table_search tr:last-child td { border-top: none;border-top: #ddd 1px solid}
 .warp_table {border-bottom: none;}
 .warp_table h1 {color: #555; padding-bottom: 10px;}
+.c_member table {
+        display: block;
+        max-width: 100%;
+        overflow: scroll;
+}
